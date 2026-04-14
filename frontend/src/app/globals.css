@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply min-h-screen bg-slate-50 text-slate-900 antialiased;
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-3xl border border-slate-200 bg-white shadow-sm;
+  }
+
+  .dashboard-card {
+    @apply rounded-3xl border border-slate-200 bg-white shadow-sm;
+  }
+
+  .section-title {
+    @apply text-2xl font-bold tracking-tight text-slate-900;
+  }
+
+  .section-subtitle {
+    @apply text-sm leading-6 text-slate-600;
+  }
+
+  .stat-card {
+    @apply rounded-2xl border border-slate-200 bg-white p-5 shadow-sm;
+  }
+
+  .input-ui {
+    @apply w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-emerald-500;
+  }
+
+  .select-ui {
+    @apply rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-emerald-500;
+  }
+
+  .button-primary {
+    @apply inline-flex items-center justify-center rounded-2xl bg-emerald-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .button-secondary {
+    @apply inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-50;
+  }
+
+  .badge-muted {
+    @apply rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700;
+  }
+
+  .badge-success {
+    @apply rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700;
+  }
+
+  .badge-warning {
+    @apply rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-700;
+  }
+
+  .badge-danger {
+    @apply rounded-full bg-rose-100 px-3 py-1 text-xs font-semibold text-rose-700;
+  }
+
+  .badge-info {
+    @apply rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold text-sky-700;
+  }
+}
