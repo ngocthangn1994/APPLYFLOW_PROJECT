@@ -18,12 +18,12 @@ export function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center rounded-2xl px-5 py-2.5 text-sm font-semibold transition";
+    "inline-flex items-center justify-center rounded-2xl px-5 py-2.5 text-sm font-semibold transition-colors duration-200";
 
   const variantStyles = {
     primary: "bg-emerald-600 text-white hover:bg-emerald-700",
     secondary:
-      "border border-slate-200 bg-white text-slate-700 hover:bg-slate-50",
+      "border border-slate-300 bg-white text-slate-800 hover:bg-slate-50 hover:border-slate-400",
     ghost: "bg-transparent text-slate-700 hover:bg-slate-100",
   };
 

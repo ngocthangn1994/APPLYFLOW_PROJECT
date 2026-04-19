@@ -122,7 +122,7 @@ export function Footer() {
                 </p>
 
                 <p className="mt-4 break-words text-base font-semibold text-slate-950">
-                  hello@applynova.ai
+                  michaelnguyen@applynova.ai
                 </p>
 
                 <p className="mt-3 max-w-md text-sm leading-7 text-slate-600">

@@ -31,6 +31,14 @@ export function DashboardSidebar({ admin = false }: DashboardSidebarProps) {
   const pathname = usePathname();
   const links = admin ? adminLinks : clientLinks;
 
+  function isLinkActive(href: string) {
+    if (href === "/dashboard" || href === "/admin") {
+      return pathname === href;
+    }
+
+    return pathname === href || pathname.startsWith(`${href}/`);
+  }
+
   return (
     <aside className="flex h-full flex-col rounded-[2rem] border border-slate-200 bg-white shadow-sm">
       <div className="border-b border-slate-200 p-5">
@@ -57,9 +65,7 @@ export function DashboardSidebar({ admin = false }: DashboardSidebarProps) {
 
         <nav className="space-y-1.5">
           {links.map((link) => {
-            const isActive =
-              pathname === link.href ||
-              (link.href !== "/" && pathname.startsWith(link.href));
+            const isActive = isLinkActive(link.href);
 
             return (
               <Link

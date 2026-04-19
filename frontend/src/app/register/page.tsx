@@ -48,10 +48,17 @@ export default function RegisterPage() {
         throw new Error(data.message || "Register failed");
       }
 
-      const token = data.token || data.accessToken || data?.data?.token;
+      const token = data.token || data.accessToken || data?.data?.token || null;
       const refreshToken =
         data.refreshToken || data?.data?.refreshToken || null;
-      const user = data.user || data?.data?.user;
+
+      const rawUser = data.user || data?.data?.user || {};
+
+      const user = {
+        id: rawUser.id || rawUser._id || "",
+        fullName: rawUser.fullName || rawUser.name || fullName,
+        email: rawUser.email || email,
+      };
 
       if (token) {
         localStorage.setItem("accessToken", token);
@@ -61,11 +68,9 @@ export default function RegisterPage() {
         localStorage.setItem("refreshToken", refreshToken);
       }
 
-      if (user) {
-        localStorage.setItem("user", JSON.stringify(user));
-      }
+      localStorage.setItem("user", JSON.stringify(user));
 
-      router.push("/onboarding");
+      router.push("/dashboard");
     } catch (err: any) {
       setError(err.message || "Something went wrong");
     } finally {

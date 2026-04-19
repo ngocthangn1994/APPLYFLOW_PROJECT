@@ -184,13 +184,15 @@ export default function HomePage() {
                 <div className="mt-9 flex flex-wrap items-center gap-3">
                   <Button
                     href="/register"
-                    className="rounded-2xl bg-emerald-600 px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_34px_-14px_rgba(5,150,105,0.65)] hover:bg-emerald-500"
+                    className="rounded-2xl px-6 py-3 text-sm shadow-[0_14px_34px_-14px_rgba(5,150,105,0.65)] hover:bg-emerald-500"
                   >
                     Start my concierge
                   </Button>
+
                   <Button
                     href="/pricing"
-                    className="rounded-2xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-800 shadow-sm hover:border-slate-400"
+                    variant="secondary"
+                    className="rounded-2xl px-6 py-3 text-sm shadow-sm"
                   >
                     View plans
                   </Button>
@@ -479,13 +481,15 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-3">
                 <Button
                   href="/register"
-                  className="rounded-2xl bg-emerald-600 px-6 py-3 font-semibold text-white shadow-[0_14px_34px_-16px_rgba(5,150,105,0.7)] hover:bg-emerald-500"
+                  className="rounded-2xl px-6 py-3 shadow-[0_14px_34px_-16px_rgba(5,150,105,0.7)] hover:bg-emerald-500"
                 >
                   Create account
                 </Button>
+
                 <Button
                   href="/pricing"
-                  className="rounded-2xl border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-800 shadow-sm"
+                  variant="secondary"
+                  className="rounded-2xl px-6 py-3 shadow-sm"
                 >
                   View pricing
                 </Button>
