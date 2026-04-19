@@ -4,7 +4,7 @@ config();
 
 export const env = {
   NODE_ENV: process.env.NODE_ENV || "development",
-  PORT: process.env.PORT || "4000",
+  PORT: process.env.PORT || "10000",
   CLIENT_URL: process.env.CLIENT_URL || "http://localhost:3000",
   MONGODB_URI: process.env.MONGODB_URI || "",
   JWT_SECRET: process.env.JWT_SECRET || "",
